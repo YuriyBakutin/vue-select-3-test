@@ -8787,15 +8787,12 @@ function Prop(options) {
     };
 }
 
-// import vueSelect from 'vue-select' // - is not works // 'vue-select/src/components/Select.vue' - is works
-// Vue.component('vSelect', globalThis.VueSelect.VueSelect)
 let HelloWorld = class HelloWorld extends Vue {
     constructor() {
         super(...arguments);
         this.options = [
-            'Пункт 1',
-            'Пункт 2',
-            'Пункт 2.1',
+            'First',
+            'Second',
             this.item
         ];
     }
@@ -8972,11 +8969,11 @@ __vue_render__._withStripped = true;
   /* style */
   const __vue_inject_styles__ = function (inject) {
     if (!inject) return
-    inject("data-v-8195d4d2_0", { source: "\nh3[data-v-8195d4d2] {\n  margin: 40px 0 0;\n}\nul[data-v-8195d4d2] {\n  list-style-type: none;\n  padding: 0;\n}\nli[data-v-8195d4d2] {\n  display: inline-block;\n  margin: 0 10px;\n}\na[data-v-8195d4d2] {\n  color: #42b983;\n}\n", map: {"version":3,"sources":["C:\\Users\\Yuriy\\work\\tests\\vue-select-3-test\\src\\components\\HelloWorld.vue"],"names":[],"mappings":";AAiCA;EACA,gBAAA;AACA;AACA;EACA,qBAAA;EACA,UAAA;AACA;AACA;EACA,qBAAA;EACA,cAAA;AACA;AACA;EACA,cAAA;AACA","file":"HelloWorld.vue","sourcesContent":["<template>\n  <div class=\"hello\">\n    <h1>Vue Select:</h1>\n    <vueSelect :options=\"options\" />\n  </div>\n</template>\n\n<script lang=\"ts\">\n// import vueSelect from 'vue-select' // - is not works // 'vue-select/src/components/Select.vue' - is works\n\nimport { Component, Prop, Vue } from 'vue-property-decorator'\n\n// Vue.component('vSelect', globalThis.VueSelect.VueSelect)\n\n@Component({\n  components: {\n    vueSelect: globalThis.VueSelect.VueSelect\n  }\n})\nexport default class HelloWorld extends Vue {\n  @Prop() private item!: string\n\n  private options: string[] = [\n    'Пункт 1',\n    'Пункт 2',\n    'Пункт 2.1',\n    this.item\n  ]\n}\n</script>\n\n<!-- Add \"scoped\" attribute to limit CSS to this component only -->\n<style scoped>\nh3 {\n  margin: 40px 0 0;\n}\nul {\n  list-style-type: none;\n  padding: 0;\n}\nli {\n  display: inline-block;\n  margin: 0 10px;\n}\na {\n  color: #42b983;\n}\n</style>\n"]}, media: undefined });
+    inject("data-v-79b4ff9e_0", { source: "\nh3[data-v-79b4ff9e] {\n  margin: 40px 0 0;\n}\nul[data-v-79b4ff9e] {\n  list-style-type: none;\n  padding: 0;\n}\nli[data-v-79b4ff9e] {\n  display: inline-block;\n  margin: 0 10px;\n}\na[data-v-79b4ff9e] {\n  color: #42b983;\n}\n", map: {"version":3,"sources":["C:\\Users\\Yuriy\\work\\tests\\vue-select-3-test\\src\\components\\HelloWorld.vue"],"names":[],"mappings":";AA6BA;EACA,gBAAA;AACA;AACA;EACA,qBAAA;EACA,UAAA;AACA;AACA;EACA,qBAAA;EACA,cAAA;AACA;AACA;EACA,cAAA;AACA","file":"HelloWorld.vue","sourcesContent":["<template>\n  <div class=\"hello\">\n    <h1>Vue Select:</h1>\n    <vueSelect :options=\"options\" />\n  </div>\n</template>\n\n<script lang=\"ts\">\n\nimport { Component, Prop, Vue } from 'vue-property-decorator'\n\n@Component({\n  components: {\n    vueSelect: globalThis.VueSelect.VueSelect\n  }\n})\nexport default class HelloWorld extends Vue {\n  @Prop() private item!: string\n\n  private options: string[] = [\n    'First',\n    'Second',\n    this.item\n  ]\n}\n</script>\n\n<!-- Add \"scoped\" attribute to limit CSS to this component only -->\n<style scoped>\nh3 {\n  margin: 40px 0 0;\n}\nul {\n  list-style-type: none;\n  padding: 0;\n}\nli {\n  display: inline-block;\n  margin: 0 10px;\n}\na {\n  color: #42b983;\n}\n</style>\n"]}, media: undefined });
 
   };
   /* scoped */
-  const __vue_scope_id__ = "data-v-8195d4d2";
+  const __vue_scope_id__ = "data-v-79b4ff9e";
   /* module identifier */
   const __vue_module_identifier__ = undefined;
   /* functional template */
@@ -9027,7 +9024,7 @@ var __vue_render__$1 = function() {
         attrs: { alt: "Vue logo", src: img }
       }),
       _vm._v(" "),
-      _c("HelloWorld", { attrs: { item: "А этот пункт прилетел через Prop." } })
+      _c("HelloWorld", { attrs: { item: "External - from Prop" } })
     ],
     1
   )
@@ -9038,7 +9035,7 @@ __vue_render__$1._withStripped = true;
   /* style */
   const __vue_inject_styles__$1 = function (inject) {
     if (!inject) return
-    inject("data-v-170c91a5_0", { source: "\n#app {\n  font-family: Avenir, Helvetica, Arial, sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  text-align: center;\n  color: #2c3e50;\n  margin-top: 60px;\n}\n", map: {"version":3,"sources":["C:\\Users\\Yuriy\\work\\tests\\vue-select-3-test\\src\\App.vue"],"names":[],"mappings":";AAoBA;EACA,iDAAA;EACA,mCAAA;EACA,kCAAA;EACA,kBAAA;EACA,cAAA;EACA,gBAAA;AACA","file":"App.vue","sourcesContent":["<template>\n  <div id=\"app\">\n    <img alt=\"Vue logo\" src=\"./assets/logo.png\">\n    <HelloWorld item=\"А этот пункт прилетел через Prop.\"/>\n  </div>\n</template>\n\n<script lang=\"ts\">\nimport { Component, Vue } from 'vue-property-decorator'\nimport HelloWorld from './components/HelloWorld.vue'\n\n@Component({\n  components: {\n    HelloWorld\n  }\n})\nexport default class App extends Vue {}\n</script>\n\n<style>\n#app {\n  font-family: Avenir, Helvetica, Arial, sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  text-align: center;\n  color: #2c3e50;\n  margin-top: 60px;\n}\n</style>\n"]}, media: undefined });
+    inject("data-v-8ef60e98_0", { source: "\n#app {\n  font-family: Avenir, Helvetica, Arial, sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  text-align: center;\n  color: #2c3e50;\n  margin-top: 60px;\n}\n", map: {"version":3,"sources":["C:\\Users\\Yuriy\\work\\tests\\vue-select-3-test\\src\\App.vue"],"names":[],"mappings":";AAoBA;EACA,iDAAA;EACA,mCAAA;EACA,kCAAA;EACA,kBAAA;EACA,cAAA;EACA,gBAAA;AACA","file":"App.vue","sourcesContent":["<template>\n  <div id=\"app\">\n    <img alt=\"Vue logo\" src=\"./assets/logo.png\">\n    <HelloWorld item=\"External - from Prop\"/>\n  </div>\n</template>\n\n<script lang=\"ts\">\nimport { Component, Vue } from 'vue-property-decorator'\nimport HelloWorld from './components/HelloWorld.vue'\n\n@Component({\n  components: {\n    HelloWorld\n  }\n})\nexport default class App extends Vue {}\n</script>\n\n<style>\n#app {\n  font-family: Avenir, Helvetica, Arial, sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  text-align: center;\n  color: #2c3e50;\n  margin-top: 60px;\n}\n</style>\n"]}, media: undefined });
 
   };
   /* scoped */
